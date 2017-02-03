@@ -33,7 +33,7 @@ public class DynomiteClusterConnectionManager {
 			final List<Host> hosts = new ArrayList<Host>();
 			   @Override
 			   public Collection<Host> getHosts() {
-			    hosts.add(new Host(ip, 8102, node.getRack(), Status.Up));
+			    hosts.add(new Host(ip, 22222, node.getRack(), Status.Up));
 			    return hosts;
 			   }
 		};
@@ -129,7 +129,7 @@ public class DynomiteClusterConnectionManager {
 		final List<Host> hosts = new ArrayList<Host>();
 		
 		for(DynomiteNodeInfo node: nodes){
-			hosts.add(new Host(node.getServer(), 8101, node.getDc(), Status.Up));
+			hosts.add(new Host(node.getServer(), 22222, node.getDc(), Status.Up));
 		}
 		
 		final HostSupplier customHostSupplier = new HostSupplier() {
